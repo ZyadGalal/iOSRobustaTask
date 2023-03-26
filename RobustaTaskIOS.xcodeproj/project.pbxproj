@@ -12,6 +12,13 @@
 		32151F7029D0772600902B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32151F6E29D0772600902B2B /* Main.storyboard */; };
 		32151F7229D0772700902B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32151F7129D0772700902B2B /* Assets.xcassets */; };
 		32151F7529D0772700902B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32151F7329D0772700902B2B /* LaunchScreen.storyboard */; };
+		32151F8329D07C4200902B2B /* RepositoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8129D07C4200902B2B /* RepositoriesListViewController.swift */; };
+		32151F8429D07C4200902B2B /* RepositoriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32151F8229D07C4200902B2B /* RepositoriesListViewController.xib */; };
+		32151F8829D07C9700902B2B /* RepositoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8629D07C9700902B2B /* RepositoryItemTableViewCell.swift */; };
+		32151F8929D07C9700902B2B /* RepositoryItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32151F8729D07C9700902B2B /* RepositoryItemTableViewCell.xib */; };
+		32151F8C29D0812B00902B2B /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8B29D0812A00902B2B /* UITableView + Extension.swift */; };
+		32151F8E29D0813600902B2B /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8D29D0813600902B2B /* UIControl+Publisher.swift */; };
+		32151F9029D0813D00902B2B /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8F29D0813D00902B2B /* UITextField+Publisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		32151F7129D0772700902B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32151F7429D0772700902B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32151F7629D0772700902B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32151F8129D07C4200902B2B /* RepositoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewController.swift; sourceTree = "<group>"; };
+		32151F8229D07C4200902B2B /* RepositoriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesListViewController.xib; sourceTree = "<group>"; };
+		32151F8629D07C9700902B2B /* RepositoryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryItemTableViewCell.swift; sourceTree = "<group>"; };
+		32151F8729D07C9700902B2B /* RepositoryItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryItemTableViewCell.xib; sourceTree = "<group>"; };
+		32151F8B29D0812A00902B2B /* UITableView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
+		32151F8D29D0813600902B2B /* UIControl+Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
+		32151F8F29D0813D00902B2B /* UITextField+Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 		32151F6729D0772600902B2B /* RobustaTaskIOS */ = {
 			isa = PBXGroup;
 			children = (
+				32151F8A29D0812100902B2B /* Extensions */,
 				32151F7E29D07B0100902B2B /* Scenes */,
 				32151F7D29D07AB300902B2B /* Resources */,
 				32151F7C29D07AA800902B2B /* App */,
@@ -84,8 +99,38 @@
 		32151F7E29D07B0100902B2B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				32151F8029D07C1F00902B2B /* RepositoriesList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		32151F8029D07C1F00902B2B /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				32151F8529D07C8000902B2B /* Cell */,
+				32151F8129D07C4200902B2B /* RepositoriesListViewController.swift */,
+				32151F8229D07C4200902B2B /* RepositoriesListViewController.xib */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		32151F8529D07C8000902B2B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				32151F8629D07C9700902B2B /* RepositoryItemTableViewCell.swift */,
+				32151F8729D07C9700902B2B /* RepositoryItemTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		32151F8A29D0812100902B2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32151F8F29D0813D00902B2B /* UITextField+Publisher.swift */,
+				32151F8D29D0813600902B2B /* UIControl+Publisher.swift */,
+				32151F8B29D0812A00902B2B /* UITableView + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +193,9 @@
 			files = (
 				32151F7529D0772700902B2B /* LaunchScreen.storyboard in Resources */,
 				32151F7229D0772700902B2B /* Assets.xcassets in Resources */,
+				32151F8429D07C4200902B2B /* RepositoriesListViewController.xib in Resources */,
 				32151F7029D0772600902B2B /* Main.storyboard in Resources */,
+				32151F8929D07C9700902B2B /* RepositoryItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32151F8E29D0813600902B2B /* UIControl+Publisher.swift in Sources */,
+				32151F8329D07C4200902B2B /* RepositoriesListViewController.swift in Sources */,
 				32151F6929D0772600902B2B /* AppDelegate.swift in Sources */,
+				32151F8829D07C9700902B2B /* RepositoryItemTableViewCell.swift in Sources */,
+				32151F9029D0813D00902B2B /* UITextField+Publisher.swift in Sources */,
+				32151F8C29D0812B00902B2B /* UITableView + Extension.swift in Sources */,
 				32151F6B29D0772600902B2B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
