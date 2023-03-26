@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SPr-IP-ulz">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SPr-IP-ulz">
                         <rect key="frame" x="8" y="8" width="304" height="62"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-aS-LX3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-aS-LX3" customClass="ImageDownloader" customModule="RobustaTaskIOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="64" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="4K5-cx-9c6"/>
@@ -27,16 +27,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="syP-9F-ZpP">
-                                <rect key="frame" x="69" y="0.0" width="235" height="62"/>
+                                <rect key="frame" x="74" y="0.0" width="230" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIn-8f-Mmh">
-                                        <rect key="frame" x="0.0" y="0.0" width="235" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3du-c6-L5c">
-                                        <rect key="frame" x="0.0" y="31" width="235" height="31"/>
+                                        <rect key="frame" x="0.0" y="31" width="230" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="repositoryImageView" destination="fwU-aS-LX3" id="bOf-nZ-2gt"/>
+                <outlet property="repositoryImageView" destination="fwU-aS-LX3" id="uFM-cS-aJC"/>
                 <outlet property="repositoryNameLabel" destination="CIn-8f-Mmh" id="Rb1-1C-90M"/>
                 <outlet property="repositoryOwnerNameLabel" destination="3du-c6-L5c" id="XAV-Qa-1hg"/>
             </connections>
