@@ -13,6 +13,7 @@ typealias RepositoriesListViewModelType = RepositoriesListViewModelInput & Repos
 protocol RepositoriesListViewModelInput {
     func viewDidLoad()
     func searchTextUpdated(with text: String)
+    func didSelectRepo(at index: Int)
 }
 
 protocol RepositoriesListViewModelOutput {

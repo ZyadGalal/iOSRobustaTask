@@ -10,12 +10,14 @@ import Combine
 
 class RepositoriesListViewModel {
     private let repo: RepositoriesListRepoType
+    private var router: RepositoriesListRouterProtocol?
     private let repositoriesRepoSubject = CurrentValueSubject<Void, Error>(())
     private var repositories = [RepositoriesEntity]()
     private var filteredRepositories = [RepositoriesEntity]()
 
-    init(repo: RepositoriesListRepoType) {
+    init(repo: RepositoriesListRepoType, router: RepositoriesListRouterProtocol) {
         self.repo = repo
+        self.router = router
     }
 }
 
@@ -43,6 +45,11 @@ extension RepositoriesListViewModel: RepositoriesListViewModelInput {
             }
         }
         repositoriesRepoSubject.send(())
+    }
+
+    func didSelectRepo(at index: Int) {
+        let entity = filteredRepositories[index]
+        router?.showRepoDetails(entity: entity)
     }
 }
 
