@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIClient {
-    static func performRequest<model: Codable>(model: model.Type, url: APIPaths, completion: @escaping (Result<model, Error>) -> Void) {
+    static func performRequest<model: Decodable>(model: model.Type, url: APIPaths, completion: @escaping (Result<model, Error>) -> Void) {
         guard let url = URL(string: Constants.basseURL + url.path)else {
             // Error: invalid URL
             completion(.failure(ApiError.invalidURL))
