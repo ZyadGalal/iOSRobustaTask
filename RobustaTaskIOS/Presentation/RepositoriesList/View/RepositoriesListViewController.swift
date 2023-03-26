@@ -92,5 +92,7 @@ extension RepositoriesListViewController: UITableViewDataSource {
 }
 
 extension RepositoriesListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRepo(at: indexPath.row)
+    }
 }

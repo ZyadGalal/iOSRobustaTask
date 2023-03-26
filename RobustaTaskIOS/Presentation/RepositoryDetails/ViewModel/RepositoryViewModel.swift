@@ -11,8 +11,8 @@ import Combine
 class RepositoryDetailsViewModel {
     @Published var repoDetailsSubject: RepositoriesEntity
 
-    init(repoDetailsSubject: RepositoriesEntity) {
-        self.repoDetailsSubject = repoDetailsSubject
+    init(repoDetails: RepositoriesEntity) {
+        self.repoDetailsSubject = repoDetails
     }
 }
 
