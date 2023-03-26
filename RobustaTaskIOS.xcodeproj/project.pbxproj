@@ -19,6 +19,9 @@
 		32151F8C29D0812B00902B2B /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8B29D0812A00902B2B /* UITableView + Extension.swift */; };
 		32151F8E29D0813600902B2B /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8D29D0813600902B2B /* UIControl+Publisher.swift */; };
 		32151F9029D0813D00902B2B /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F8F29D0813D00902B2B /* UITextField+Publisher.swift */; };
+		32151F9329D083B000902B2B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F9229D083B000902B2B /* APIClient.swift */; };
+		32151F9529D0843E00902B2B /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F9429D0843E00902B2B /* APIPaths.swift */; };
+		32151F9729D0846E00902B2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32151F9629D0846E00902B2B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		32151F8B29D0812A00902B2B /* UITableView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
 		32151F8D29D0813600902B2B /* UIControl+Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
 		32151F8F29D0813D00902B2B /* UITextField+Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
+		32151F9229D083B000902B2B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		32151F9429D0843E00902B2B /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
+		32151F9629D0846E00902B2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		32151F6729D0772600902B2B /* RobustaTaskIOS */ = {
 			isa = PBXGroup;
 			children = (
+				32151F9129D083A100902B2B /* NetworkLayer */,
 				32151F8A29D0812100902B2B /* Extensions */,
 				32151F7E29D07B0100902B2B /* Scenes */,
 				32151F7D29D07AB300902B2B /* Resources */,
@@ -131,6 +138,16 @@
 				32151F8B29D0812A00902B2B /* UITableView + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32151F9129D083A100902B2B /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				32151F9229D083B000902B2B /* APIClient.swift */,
+				32151F9429D0843E00902B2B /* APIPaths.swift */,
+				32151F9629D0846E00902B2B /* Constants.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +226,10 @@
 				32151F8E29D0813600902B2B /* UIControl+Publisher.swift in Sources */,
 				32151F8329D07C4200902B2B /* RepositoriesListViewController.swift in Sources */,
 				32151F6929D0772600902B2B /* AppDelegate.swift in Sources */,
+				32151F9329D083B000902B2B /* APIClient.swift in Sources */,
 				32151F8829D07C9700902B2B /* RepositoryItemTableViewCell.swift in Sources */,
+				32151F9729D0846E00902B2B /* Constants.swift in Sources */,
+				32151F9529D0843E00902B2B /* APIPaths.swift in Sources */,
 				32151F9029D0813D00902B2B /* UITextField+Publisher.swift in Sources */,
 				32151F8C29D0812B00902B2B /* UITableView + Extension.swift in Sources */,
 				32151F6B29D0772600902B2B /* SceneDelegate.swift in Sources */,
