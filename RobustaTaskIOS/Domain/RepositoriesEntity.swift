@@ -11,4 +11,6 @@ struct RepositoriesEntity {
     let repositoryName: String
     let repositoryOwner: String
     let ownerImageURL: String
+    let isPrivateRepo: Bool
+    let description: String
 }

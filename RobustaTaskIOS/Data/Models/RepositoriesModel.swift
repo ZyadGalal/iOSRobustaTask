@@ -11,7 +11,7 @@ import Foundation
 struct RepositoriesModel: Decodable {
     let id: Int?
     let nodeID, name, fullName: String?
-    let repositoriesModelPrivate: Bool?
+    let privateRepo: Bool?
     let owner: Owner?
     let htmlURL: String?
     let description: String?
@@ -41,7 +41,7 @@ struct RepositoriesModel: Decodable {
         case nodeID = "node_id"
         case name
         case fullName = "full_name"
-        case repositoriesModelPrivate = "private"
+        case privateRepo = "private"
         case owner
         case htmlURL = "html_url"
         case description, fork, url
