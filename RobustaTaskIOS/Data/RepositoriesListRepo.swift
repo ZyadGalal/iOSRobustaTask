@@ -12,7 +12,9 @@ class RepositoriesListRepo {
         return model.map { model in
             RepositoriesEntity(repositoryName: model.fullName ?? "",
                                repositoryOwner: model.owner?.login ?? "",
-                               ownerImageURL: model.owner?.avatarURL ?? "")
+                               ownerImageURL: model.owner?.avatarURL ?? "",
+                               isPrivateRepo: model.privateRepo ?? false,
+                               description: model.description ?? "")
         }
     }
 }

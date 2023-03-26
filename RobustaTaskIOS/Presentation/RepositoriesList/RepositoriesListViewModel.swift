@@ -12,6 +12,8 @@ class RepositoriesListViewModel {
     private let repo: RepositoriesListRepoType
     private let repositoriesRepoSubject = CurrentValueSubject<Void, Error>(())
     private var repositories = [RepositoriesEntity]()
+    private var filteredRepositories = [RepositoriesEntity]()
+
     init(repo: RepositoriesListRepoType) {
         self.repo = repo
     }
@@ -24,6 +26,7 @@ extension RepositoriesListViewModel: RepositoriesListViewModelInput {
             switch result {
             case .success(let entity):
                 self.repositories = entity
+                self.filteredRepositories = entity
                 self.repositoriesRepoSubject.send(())
             case .failure(let error):
                 self.repositoriesRepoSubject.send(completion: .failure(error))
@@ -32,7 +35,14 @@ extension RepositoriesListViewModel: RepositoriesListViewModelInput {
     }
 
     func searchTextUpdated(with text: String) {
-        print(text)
+        if text.count < 2 {
+            filteredRepositories = repositories
+        } else {
+            filteredRepositories = repositories.filter {
+                $0.repositoryName.lowercased().contains(text.lowercased())
+            }
+        }
+        repositoriesRepoSubject.send(())
     }
 }
 
@@ -42,10 +52,10 @@ extension RepositoriesListViewModel: RepositoriesListViewModelOutput {
     }
 
     func getRepositoriesCount() -> Int {
-        return repositories.count
+        return filteredRepositories.count
     }
     
     func getRepositoryItem(at index: Int) -> RepositoriesEntity {
-        return repositories[index]
+        return filteredRepositories[index]
     }
 }
