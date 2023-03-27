@@ -8,6 +8,7 @@ Technical Task for **Robusta**.
 - Retrieve repositories from Github endpoint.
 - Repo list include owner name, owner Image, repo name.
 - Repo details include owner name, image, repo name, repo details, is private repo.
+- downloading and cache images
 
 # Architecture
 
