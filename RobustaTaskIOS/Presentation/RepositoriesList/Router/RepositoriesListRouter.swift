@@ -8,22 +8,23 @@
 import UIKit.UIViewController
 
 protocol RepositoriesListRouterProtocol {
-    func createRepositoriesList() -> UIViewController
     func showRepoDetails(entity: RepositoriesEntity)
 }
 
 class RepositoriesListRouter: RepositoriesListRouterProtocol {
     unowned var controller: UIViewController?
 
-    func createRepositoriesList() -> UIViewController {
+    static func createRepositoriesList() -> UIViewController {
         let repo = RepositoriesListRepo()
-        let viewModel = RepositoriesListViewModel(repo: repo, router: self)
-        return RepositoriesListViewController(viewModel: viewModel)
+        let router = RepositoriesListRouter()
+        let viewModel = RepositoriesListViewModel(repo: repo, router: router)
+        let viewController = RepositoriesListViewController(viewModel: viewModel)
+        router.controller = viewController
+        return viewController
     }
 
     func showRepoDetails(entity: RepositoriesEntity) {
-        let detailsRouter = RepositoryDetailsRouter()
-        let viewController = detailsRouter.createRepositoryDetails(entity: entity)
+        let viewController = RepositoryDetailsRouter.createRepositoryDetails(entity: entity)
         controller?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
