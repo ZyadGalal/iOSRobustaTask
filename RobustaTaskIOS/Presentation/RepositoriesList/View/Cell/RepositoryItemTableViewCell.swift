@@ -7,11 +7,11 @@
 
 import UIKit
 
-class RepositoryItemTableViewCell: UITableViewCell {
+final class RepositoryItemTableViewCell: UITableViewCell {
+    @IBOutlet private weak var repositoryOwnerNameLabel: UILabel!
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var repositoryImageView: ImageDownloader!
 
-    @IBOutlet weak var repositoryOwnerNameLabel: UILabel!
-    @IBOutlet weak var repositoryNameLabel: UILabel!
-    @IBOutlet weak var repositoryImageView: ImageDownloader!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

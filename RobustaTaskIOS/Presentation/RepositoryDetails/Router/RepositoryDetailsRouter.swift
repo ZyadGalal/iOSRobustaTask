@@ -8,7 +8,8 @@
 import UIKit.UIViewController
 
 protocol RepositoryDetailsRouterProtocol { }
-class RepositoryDetailsRouter: RepositoryDetailsRouterProtocol {
+
+final class RepositoryDetailsRouter: RepositoryDetailsRouterProtocol {
     static func createRepositoryDetails(entity: RepositoriesEntity) -> UIViewController {
         let viewModel = RepositoryDetailsViewModel(repoDetails: entity)
         return RepositoryDetailsViewController(viewModel: viewModel)

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RepositoryDetailsViewModel {
+final class RepositoryDetailsViewModel {
     @Published var repoDetailsSubject: RepositoriesEntity
 
     init(repoDetails: RepositoriesEntity) {

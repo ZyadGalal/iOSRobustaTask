@@ -10,11 +10,11 @@ import Combine
 
 class RepositoryDetailsViewController: UIViewController {
     
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var ownerNameLabel: UILabel!
-    @IBOutlet weak var privateRepoLabel: UILabel!
-    @IBOutlet weak var repoNameLabel: UILabel!
-    @IBOutlet weak var ownerNameImageView: ImageDownloader!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var ownerNameLabel: UILabel!
+    @IBOutlet private weak var privateRepoLabel: UILabel!
+    @IBOutlet private weak var repoNameLabel: UILabel!
+    @IBOutlet private weak var ownerNameImageView: ImageDownloader!
     
     private let viewModel: RepositoryDetailsViewModelType
     private var cancellables = Set<AnyCancellable>()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RepositoriesListRepo {
+final class RepositoriesListRepo {
     func makeEntity(model: [RepositoriesModel]) -> [RepositoriesEntity] {
         return model.map { model in
             RepositoriesEntity(repositoryName: model.fullName ?? "",

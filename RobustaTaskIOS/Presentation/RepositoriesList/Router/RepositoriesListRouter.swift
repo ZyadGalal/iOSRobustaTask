@@ -11,8 +11,8 @@ protocol RepositoriesListRouterProtocol {
     func showRepoDetails(entity: RepositoriesEntity)
 }
 
-class RepositoriesListRouter: RepositoriesListRouterProtocol {
-    unowned var controller: UIViewController?
+final class RepositoriesListRouter: RepositoriesListRouterProtocol {
+    weak var controller: UIViewController?
 
     static func createRepositoriesList() -> UIViewController {
         let repo = RepositoriesListRepo()

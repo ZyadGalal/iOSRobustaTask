@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RepositoriesListViewModel {
+final class RepositoriesListViewModel {
     private let repo: RepositoriesListRepoType
     private var router: RepositoriesListRouterProtocol?
     private let repositoriesRepoSubject = CurrentValueSubject<Void, Error>(())

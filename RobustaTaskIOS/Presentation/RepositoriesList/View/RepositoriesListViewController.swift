@@ -8,10 +8,10 @@
 import UIKit
 import Combine
 
-class RepositoriesListViewController: UIViewController {
+final class RepositoriesListViewController: UIViewController {
 
-    @IBOutlet weak var repositoriesTableView: UITableView!
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet private weak var repositoriesTableView: UITableView!
+    @IBOutlet private weak var searchTextField: UITextField!
 
     private var cancellables = Set<AnyCancellable>()
     private let viewModel: RepositoriesListViewModelType

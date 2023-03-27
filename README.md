@@ -12,7 +12,7 @@ Technical Task for **Robusta**.
 
 # Architecture
 
- Task flow with MVVM.
+ Task flow with MVVM clean architecture.
 - View: subscribe to the viewModel publishers to update the UI and send user inputs to the ViewModel.
 - Repo: responsible for business logic , get data from remote , convert DTO model to entity.
 - ViewModel: contains view logic for preparing content for display (as received from the Repo) and dealing with user inputs (by requesting new data from the Repo).
